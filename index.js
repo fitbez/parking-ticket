@@ -56,7 +56,7 @@ function ticket() {
 }
 
 function search() {
-  let ticketNo = searchInput.value;
+  let ticketNo = Number(searchInput.value);
   console.log(ticketNo);
 
   for (let i = 0; i < ticketsIssued.length; i++) {
@@ -64,9 +64,11 @@ function search() {
       displaySearchedTicket.innerHTML = ticketsIssued[ticketNo - 1];
     } else {
       displaySearchedTicket.innerHTML = `<p style="background-color: red;
-      padding: 10px; border-radius: 4px; margin-top: 10px; color: white">ticket number not avaialble</p>`;
+      padding: 10px; border-radius: 4px; margin-top: 10px; color: white">please enter a valid ticket number</p>`;
     }
   }
+  searchInput.value = null;
+  searchInput.focus();
 }
 
 console.log(searchTicket);
