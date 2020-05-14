@@ -52,3 +52,9 @@ body {
   outline: none;
   margin-left: 15px;
 }
+.clock {
+  background-color: #ff5722;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+}

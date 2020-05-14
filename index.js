@@ -43,6 +43,7 @@ function ticket() {
     id = this.id;
     time = today.toLocaleTimeString();
     newText = document.createElement("p");
+    newText.className = "clock";
     newText.textContent = `clocked in at: ${time}`;
     inTime = document.getElementById(this.id);
     inTime.style.cursor = "poin";
