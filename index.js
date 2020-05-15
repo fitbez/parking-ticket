@@ -64,7 +64,7 @@ function search() {
       displaySearchedTicket.innerHTML = ticketsIssued[ticketNo - 1];
     } else {
       displaySearchedTicket.innerHTML = `<p class="alert" style="background-color: red;
-      padding: 10px; border-radius: 4px; margin-top: 10px; color: white">please enter a valid ticket number</p>`;
+      padding: 10px; border-radius: 4px; margin: 10px 0 0 20px; color: white">please enter a valid ticket number</p>`;
     }
   }
 
