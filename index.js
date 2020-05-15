@@ -1,5 +1,5 @@
-let issueTicket = document.getElementById("tickets");
-let tickets = document.getElementById("ticket");
+const issueTicket = document.getElementById("tickets");
+const tickets = document.getElementById("ticket");
 const searchInput = document.querySelector(".search");
 const searchTicket = document.querySelector("label");
 const displaySearchedTicket = document.querySelector(
@@ -63,10 +63,16 @@ function search() {
     if (ticketNo <= ticketsIssued.length) {
       displaySearchedTicket.innerHTML = ticketsIssued[ticketNo - 1];
     } else {
-      displaySearchedTicket.innerHTML = `<p style="background-color: red;
+      displaySearchedTicket.innerHTML = `<p class="alert" style="background-color: red;
       padding: 10px; border-radius: 4px; margin-top: 10px; color: white">please enter a valid ticket number</p>`;
     }
   }
+
+  setTimeout(() => {
+    let alert = document.querySelector(".alert");
+    alert.style.display = "none";
+  }, 3000);
+
   searchInput.value = null;
   searchInput.focus();
 }
